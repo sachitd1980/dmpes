@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQUI PROTOCOL | The Autonomous Ecosystem</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --primary-color: #00ff41; /* Matrix Green */
+            --secondary-color: #00e5ff; /* Cyber Cyan */
+            --text-color: #e0e0e0;
+            --accent-color: #ff003c; /* Warning Red */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hiệu ứng nền quét (Scanline effect) */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 9999;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+        }
+
+        .glitch {
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .glitch::before, .glitch::after {
+            content: "EQUI PROTOCOL";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        .glitch::before { left: 2px; text-shadow: -2px 0 var(--accent-color); clip: rect(44px, 450px, 56px, 0); animation: glitch-anim 5s infinite linear alternate-reverse; }
+        .glitch::after { left: -2px; text-shadow: -2px 0 var(--secondary-color); clip: rect(44px, 450px, 56px, 0); animation: glitch-anim2 5s infinite linear alternate-reverse; }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(31px, 9999px, 94px, 0); }
+            20% { clip: rect(62px, 9999px, 42px, 0); }
+            /* ... simplified for code length ... */
+            100% { clip: rect(89px, 9999px, 98px, 0); }
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: var(--secondary-color);
+            letter-spacing: 4px;
+        }
+
+        /* Sections */
+        section { padding: 100px 0; border-bottom: 1px solid #222; }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #111;
+            padding: 30px;
+            border: 1px solid #333;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+
+        .card h3 { color: var(--secondary-color); margin-bottom: 15px; }
+
+        /* Manifesto Section */
+        .manifesto {
+            font-size: 1.5rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        /* Footer/CTA */
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            background: #050505;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            margin-top: 30px;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            color: black;
+            box-shadow: 0 0 30px var(--primary-color);
+        }
+
+        .status-bar {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 50px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .glitch { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="glitch">EQUI PROTOCOL</div>
+        <p class="tagline">BEYOND SOFTWARE. BEYOND MONEY.</p>
+        <a href="#about" class="btn">Khám phá thực thể</a>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>MANIFESTO</h2>
+            <div class="manifesto">
+                "Chúng ta không xây dựng ứng dụng. Chúng ta đang kiến tạo một hệ sinh thái tự trị. Một thực thể kỹ thuật số không cần máy chủ trung tâm, không cần sự cho phép, và tự vận hành bằng trí tuệ nhân tạo và giá trị thực."
+            </div>
+        </section>
+
+        <section id="pillars">
+            <h2>CORE PILLARS</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>01. COGNITIVE LAYER</h3>
+                    <p>Sử dụng AGI (Trí tuệ nhân tạo tổng quát) để điều phối mạng lưới, xác thực giá trị và đưa ra các quyết định kinh tế tự trị.</p>
+                </div>
+                <div class="card">
+                    <h3>02. ECONOMIC LAYER</h3>
+                    <p>Đồng tiền $EQUI không được in ra. Nó được đúc dựa trên 'Bằng chứng về giá trị' thông qua hạ tầng IoT và quảng cáo tàng hình.</p>
+                </div>
+                <div class="card">
+                    <h3>03. STEALTH LAYER</h3>
+                    <p|Mạng lưới P2P tự động nhảy cổng, xoay vòng khóa mã hóa và ẩn mình trước mọi sự giám sát của hệ thống tập trung.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hardware">
+            <h2>HARDWARE NODES</h2>
+            <div class="grid">
+                <div class="card" style="grid-column: span 2;">
+                    <h3>The ESP32-S3 Sentinel</h3>
+                    <p>Các nút phần cứng siêu nhỏ, tiêu thụ năng lượng thấp, hoạt động như những 'công nhân kinh tế' âm thầm trong mạng lưới toàn cầu. Chúng thu thập dữ liệu, hiển thị quảng cáo và đóng góp vào sự sinh tồn của hệ sinh thái.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 EQUI PROTOCOL | [UNIDENTIFIED ENTITY]</p>
+        <p class="status-bar">SYSTEM STATUS: <span style="color: var(--primary-color);">OPERATIONAL</span> | NETWORK: <span style="color: var(--secondary-color);">P2P ENCRYPTED</span></p>
+        <a href="#" class="btn" style="font-size: 0.8rem; padding: 10px 20px;">Gia nhập mạng lưới</a>
+    </footer>
+
+</body>
+</html>

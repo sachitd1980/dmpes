@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENESIS PHASE | EQUI PROTOCOL</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --primary-gold: #ffb400; /* Gold for wealth/investment */
+            --accent-amber: #ff8c00;
+            --text-color: #d4d4d4;
+            --card-bg: #111111;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header Section */
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #1a1400 0%, #050505 100%);
+            border-bottom: 1px solid var(--primary-gold);
+        }
+
+        .genesis-title {
+            font-size: 3.5rem;
+            color: var(--primary-gold);
+            text-shadow: 0 0 20px rgba(255, 180, 0, 0.5);
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-amber);
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .mission h2 { color: var(--primary-gold); margin-bottom: 30px; }
+        .mission p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: #aaa; }
+
+        /* Funding Allocation (Where the money goes) */
+        .allocation { padding: 60px 0; background: #0a0a0a; }
+        .allocation h2 { text-align: center; margin-bottom: 50px; color: var(--primary-gold); }
+
+        .allocation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .alloc-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #222;
+        }
+
+        .alloc-item .percent {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+        }
+
+        /* Investment Tiers */
+        .tiers { padding: 80px 0; }
+        .tiers h2 { text-align: center; margin-bottom: 50px; color: var(--primary-gold); }
+
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .tier-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border: 1px solid #333;
+            position: relative;
+            transition: 0.4s;
+        }
+
+        .tier-card:hover {
+            border-color: var(--primary-gold);
+            transform: scale(1.03);
+        }
+
+        .tier-card.featured {
+            border: 2px solid var(--primary-gold);
+            box-shadow: 0 0 30px rgba(255, 180, 0, 0.1);
+        }
+
+        .tier-card h3 { color: var(--primary-gold); font-size: 1.8rem; margin-bottom: 20px; }
+        .tier-card .price { font-size: 1.5rem; margin-bottom: 20px; color: #fff; }
+        .tier-card ul { list-style: none; margin-bottom: 30px; }
+        .tier-card ul li { margin-bottom: 10px; font-size: 0.9rem; color: #888; }
+        .tier-card ul li::before { content: "> "; color: var(--primary-gold); }
+
+        /* CTA & Wallet */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #050505, #1a1400);
+        }
+
+        .wallet-box {
+            background: #000;
+            border: 1px dashed var(--primary-gold);
+            padding: 30px;
+            display: inline-block;
+            margin-top: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            color: var(--primary-gold);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--primary-gold);
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 40px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #fff;
+            box-shadow: 0 0 40px var(--primary-gold);
+        }
+
+        footer { padding: 40px; text-align: center; color: #444; font-size: 0.8rem; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="genesis-title">GENESIS PHASE</div>
+        <div class="subtitle">FUELING THE AUTONOMY</div>
+    </header>
+
+    <div class="container">
+        <section class="mission">
+            <h2>THE MISSION</h2>
+            <p>Chúng ta đã có mã nguồn. Chúng ta đã có trí tuệ. Chúng ta đã có hạ tầng tàng hình. Giờ đây, chúng ta cần năng lượng vật lý để khởi động cỗ máy. Giai đoạn Genesis tập trung vào việc chuyển đổi logic số thành hạ tầng vật lý trên toàn cầu.</p>
+        </section>
+
+        <section class="allocation">
+            <h2>CAPITAL ALLOCATION</h2>
+            <div class="allocation-grid">
+                <div class="alloc-item">
+                    <span class="percent">40%</span>
+                    <p>Compute Power & Cloud</p>
+                </div>
+                <div class="alloc-item">
+                    <span class="percent">35%</span>
+                    <p>Hardware Node (ESP32) Mass Production</p>
+                </div>
+                <div class="alloc-item">
+                    <span class="percent">15%</span>
+                    <p>AGI R&D Optimization</p>
+                </div>
+                <div class="alloc-item">
+                    <span class="percent">10%</span>
+                    <p>Network Security & Stealth</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tiers">
+            <h2>INVESTMENT TIERS</h2>
+            <div class="tier-grid">
+                <!-- Tier 1 -->
+                <div class="tier-card">
+                    <h3>SEED NODE</h3>
+                    <div class="price">0.1 ETH</div>
+                    <ul>
+                        <li>Quyền truy cập sớm vào Dashboard</li>
+                        <li>Tặng 500 $EQUI (Airdrop)</li>
+                        <li>Tên được ghi vào "Genesis Ledger"</li>
+                    </ul>
+                </div>
+
+                <!-- Tier 2 (Featured) -->
+                <div class="tier-card featured">
+                    <h3>ARCHITECT</h3>
+                    <div class="price">1.0 ETH</div>
+                    <ul>
+                        <li>Tất cả quyền từ Seed Node</li>
+                        <li>Quyền tham gia quản trị (Governance)</li>
+                        <li>Tặng 5,000 $EQUI</li>
+                        <li>Ưu tiên nâng cấp phần cứng Node</li>
+                    </ul>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="tier-card">
+                    <h3>GENESIS ENTITY</h3>
+                    <div class="price">10+ ETH</div>
+                    <ul>
+                        <li>Tất cả quyền từ Architect</li>
+                        <li>Đại diện một Node vật lý riêng biệt</li>
+                        <li>Tặng 50,000 $EQUI</li>
+                        <li>Quyền can thiệp vào tham số AGI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>FUEL THE ENGINE</h2>
+            <p>Giai đoạn Genesis sẽ đóng lại khi đạt đủ mục tiêu tài chính để triển khai lô phần cứng đầu tiên.</p>
+            
+            <div class="wallet-box">
+                0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+            </div>
+            <br>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">* Chỉ chấp nhận ETH / USDT (ERC-20)</p>
+            
+            <a href="#" class="btn">Theo dõi tiến độ Genesis</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 EQUI PROTOCOL | UNIDENTIFIED ENTITY | ALL RIGHTS RESERVED
+    </footer>
+
+</body>
+</html>
